@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="#">University</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">About</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#our-faculty">Faculty</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#manage-applications">Applications</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+  <br><br>
+
+<div class="container">
+    <h2>Submit Application</h2>
+    <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="userId">User ID</label>
+        <input type="number" id="userId" formControlName="userId" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="programId">Program ID</label>
+        <input type="number" id="programId" formControlName="programId" class="form-control">
+      </div>
+  
+      <div formGroupName="user">
+        <h3>User Details</h3>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" formControlName="username" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="contactInformation">Contact Information</label>
+          <input type="text" id="contactInformation" formControlName="contactInformation" class="form-control">
+        </div>
+      </div>
+  
+      <div formGroupName="academicProgram">
+        <h3>Academic Program Details</h3>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" formControlName="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="type">Type</label>
+          <input type="text" id="type" formControlName="type" class="form-control">
+        </div>
+      </div>
+      <br><br>
+      <button type="submit" class="btn btn-primary" [disabled]="!applicationForm.valid">Submit</button>
+    </form>
+  </div>
+  
+  

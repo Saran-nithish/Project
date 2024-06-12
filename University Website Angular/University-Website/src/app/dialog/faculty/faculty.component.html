@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">{{ faculty.facultyId ? 'Edit Faculty' : 'Add Faculty' }}</h2>
+  <form (ngSubmit)="save()">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" [(ngModel)]="faculty.name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Contact Information</label>
+      <input type="text" class="form-control" [(ngModel)]="faculty.contactInformation" name="contactInformation" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Expertise</label>
+      <input type="text" class="form-control" [(ngModel)]="faculty.expertise" name="expertise" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Office Hours</label>
+      <input type="text" class="form-control" [(ngModel)]="faculty.officeHours" name="officeHours" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Department</label>
+      <select class="form-select" [(ngModel)]="faculty.departmentId" name="departmentId" required>
+        <option *ngFor="let department of departments" [value]="department.departmentId">
+          {{ department.name }}
+        </option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btn btn-secondary me-2" (click)="cancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary">{{ faculty.facultyId ? 'Update' : 'Save' }}</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .form-control {
+    border-color: rgba(0, 0, 0, 0.1); 
+  }
+  
+  .btn-primary {
+    background-color: #007bff; 
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; 
+  }
+  
+  @media (max-width: 600px) {
+    .form-control,
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+  

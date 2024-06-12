@@ -1,0 +1,175 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\TechM\\University\\University Website\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\models\\programdeets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\models\\programdeets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\controllers\\programdeetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\controllers\\programdeetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\models\\universitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\models\\universitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\models\\financialaid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\models\\financialaid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\controllers\\admissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\controllers\\admissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|d:\\techm\\university\\university website\\university website\\migrations\\20240611134802_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F21F37-184C-4A1F-9E8C-F8C0B577C6F2}|University Website\\University Website.csproj|solutionrelative:university website\\migrations\\20240611134802_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "University Website\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "University Website\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAAwA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:50:03.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProgramDeetsController.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Controllers\\ProgramDeetsController.cs",
+              "RelativeDocumentMoniker": "University Website\\Controllers\\ProgramDeetsController.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Controllers\\ProgramDeetsController.cs",
+              "RelativeToolTip": "University Website\\Controllers\\ProgramDeetsController.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAA0wG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:49:18.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20240611134802_initial.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Migrations\\20240611134802_initial.cs",
+              "RelativeDocumentMoniker": "University Website\\Migrations\\20240611134802_initial.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Migrations\\20240611134802_initial.cs",
+              "RelativeToolTip": "University Website\\Migrations\\20240611134802_initial.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:48:02.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UniversityDBContext.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Models\\UniversityDBContext.cs",
+              "RelativeDocumentMoniker": "University Website\\Models\\UniversityDBContext.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Models\\UniversityDBContext.cs",
+              "RelativeToolTip": "University Website\\Models\\UniversityDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:47:08.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Models\\User.cs",
+              "RelativeDocumentMoniker": "University Website\\Models\\User.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Models\\User.cs",
+              "RelativeToolTip": "University Website\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:47:07.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "University Website\\Models\\Department.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Models\\Department.cs",
+              "RelativeToolTip": "University Website\\Models\\Department.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:46:14.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProgramDeets.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Models\\ProgramDeets.cs",
+              "RelativeDocumentMoniker": "University Website\\Models\\ProgramDeets.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Models\\ProgramDeets.cs",
+              "RelativeToolTip": "University Website\\Models\\ProgramDeets.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:45:48.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdmissionsController.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Controllers\\AdmissionsController.cs",
+              "RelativeDocumentMoniker": "University Website\\Controllers\\AdmissionsController.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Controllers\\AdmissionsController.cs",
+              "RelativeToolTip": "University Website\\Controllers\\AdmissionsController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:44:31.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FinancialAid.cs",
+              "DocumentMoniker": "D:\\TechM\\University\\University Website\\University Website\\Models\\FinancialAid.cs",
+              "RelativeDocumentMoniker": "University Website\\Models\\FinancialAid.cs",
+              "ToolTip": "D:\\TechM\\University\\University Website\\University Website\\Models\\FinancialAid.cs",
+              "RelativeToolTip": "University Website\\Models\\FinancialAid.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:43:20.283Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

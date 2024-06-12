@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h5 class="modal-title">{{ department.departmentId ? 'Edit Department' : 'Add Department' }}</h5>
+  <button type="button" class="btn-close" (click)="cancel()" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="mb-3">
+      <label for="departmentName" class="form-label">Name</label>
+      <input id="departmentName" class="form-control" placeholder="Enter department name" [(ngModel)]="department.name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="departmentDescription" class="form-label">Description</label>
+      <textarea id="departmentDescription" class="form-control" placeholder="Enter department description" [(ngModel)]="department.description" name="description"></textarea>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+  <button type="button" class="btn btn-primary" (click)="save()">{{ department.departmentId ? 'Update' : 'Save' }}</button>
+</div>

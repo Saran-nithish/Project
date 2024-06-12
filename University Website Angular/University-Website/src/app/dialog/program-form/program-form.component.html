@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>{{ mode === 'add' ? 'Add Program' : 'Edit Program' }}</h2>
+<div mat-dialog-content class="form-container">
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="program.name" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="type" class="form-label">Type</label>
+      <input type="text" class="form-control" id="type" name="type" [(ngModel)]="program.type" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" name="description" [(ngModel)]="program.description" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="admissionRequirements" class="form-label">Admission Requirements</label>
+      <textarea class="form-control" id="admissionRequirements" name="admissionRequirements" [(ngModel)]="program.admissionRequirements" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="curriculumDetails" class="form-label">Curriculum Details</label>
+      <textarea class="form-control" id="curriculumDetails" name="curriculumDetails" [(ngModel)]="program.curriculumDetails" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="facultyProfiles" class="form-label">Faculty Profiles</label>
+      <textarea class="form-control" id="facultyProfiles" name="facultyProfiles" [(ngModel)]="program.facultyProfiles" required></textarea>
+    </div>
+
+    <div class="text-end">
+      <button type="button" class="btn btn-secondary me-2" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+    </div>
+  </form>
+</div>

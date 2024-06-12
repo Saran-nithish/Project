@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container px-4 px-lg-5">
+    <a class="navbar-brand" href="#">University</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#academic-programs">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#our-faculty">Faculty</a></li>
+        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/managefaculties']">Faculties</a></li>
+        <li class="nav-item"><a class="nav-link" href="#manage-applications">Applications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Department List</h2>
+  <div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary" (click)="addDepartment()">
+      <i class="bi bi-plus-lg me-2"></i>Add Department
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let department of departments">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ department.name }}</h5>
+          <p class="card-text">{{ department.description }}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <button class="btn btn-outline-primary btn-sm" (click)="editDepartment(department)">
+            <i class="bi bi-pencil-square me-1"></i>Edit
+          </button>
+          <button class="btn btn-outline-danger btn-sm" (click)="deleteDepartment(department.departmentId)">
+            <i class="bi bi-trash me-1"></i>Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
