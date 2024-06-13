@@ -4,7 +4,6 @@ import { UserService } from '../Services/user.service';
 import { Program } from '../interfaces/program';
 import { UniversityService } from '../Services/university.service';
 import { CommonModule } from '@angular/common';
-import { MatDialog, matDialogAnimations } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';

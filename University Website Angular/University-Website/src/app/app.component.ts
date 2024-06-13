@@ -26,6 +26,10 @@ import { ManageProgramsComponent } from './manage-programs/manage-programs.compo
 import { ProgramFormComponent } from './dialog/program-form/program-form.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ManageAdmissionsComponent } from './manage-admissions/manage-admissions.component';
+import { ApplicationComponent } from './application/application.component';
+import { FacultyDirectoryComponent } from './faculty-directory/faculty-directory.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -52,8 +56,12 @@ MatSnackBarModule,
 MatProgressBarModule,
 MatTableModule,
 MatIconModule,
+ManageAdmissionsComponent,
+ApplicationComponent,
 MatSelectModule,AdmissionsComponent,AcademicProgramsComponent,MatDialogActions,MatCardModule,MatFormFieldModule,
-ManageProgramsComponent,MatInputModule
+ManageProgramsComponent,MatInputModule,
+FacultyDirectoryComponent,
+AboutComponent
 
 ],
   templateUrl: './app.component.html',

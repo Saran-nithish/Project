@@ -14,21 +14,16 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="#">University</a>
+      <a class="navbar-brand" [routerLink]="['/home']">University</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
               aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">About</a></li>
           <li class="nav-item"><a class="nav-link" [routerLink]="['/mprogram']">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
           <li class="nav-item"><a class="nav-link" [routerLink]="['/managefaculties']">Faculties</a></li>
-          <li class="nav-item"><a class="nav-link" href="#manage-applications">Applications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/manageadmissions']">Applications</a></li>
           <li class="nav-item">
             <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
           </li>
@@ -39,70 +34,84 @@
   <br><br>
   <div class="jumbotron text-center">
     <div class="container">
-      <h1 class="display-4">Welcome to University</h1>
-      <p class="lead">Empowering minds, changing lives.</p>
+      <h1 class="display-4">Welcome Admin!</h1>
+      <p class="lead">Manage and oversee University operations.</p>
     </div>
   </div>
+  
   <div class="container mt-5">
-    <div id="about" class="feature-box">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <img class="img-fluid mb-4 mb-lg-0" src="assets/images/uni.jpg" alt="About">
+    <div id="statistics" class="feature-box">
+      <h3 class="mb-3">University Statistics</h3>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-user-graduate"></i>
+              <h5 class="card-title mt-3">Total Students</h5>
+              <p class="card-text">{{ totalStudents }}</p>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 order-lg-1">
-          <h3 class="mb-3">About University</h3>
-          <p>University is committed to providing quality education, research, and service to our community. We foster intellectual growth and prepare students for the future.</p>
-          <p>Our values include excellence, diversity, innovation, and integrity.</p>
+  
+        <div class="col-lg-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h5 class="card-title mt-3">Total Faculty</h5>
+              <p class="card-text">{{ totalFaculty }}</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-book"></i>
+              <h5 class="card-title mt-3">Total Programs</h5>
+              <p class="card-text">{{ totalPrograms }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div id="academic-programs" class="feature-box">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h3 class="mb-3">Academic Programs</h3>
-          <p>Explore our wide range of academic programs designed to prepare students for success in their chosen fields.</p>
-          <p>Our programs emphasize hands-on learning and practical experience.</p>
+  
+    <div id="controls" class="feature-box mt-5">
+      <h3 class="mb-3">Admin Controls</h3>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-graduation-cap"></i>
+              <h5 class="card-title mt-3">Manage Admissions</h5>
+              <p class="card-text">View and manage student admissions.</p>
+              <a [routerLink]="['/manageadmissions']" class="btn btn-primary">Manage Admissions</a>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6">
-          <img class="img-fluid mb-4 mb-lg-0" src="assets/images/aca.jpg" alt="Academic Programs">
+  
+        <div class="col-lg-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h5 class="card-title mt-3">Manage Faculties</h5>
+              <p class="card-text">View and manage university faculty members.</p>
+              <a [routerLink]="['/managefaculties']" class="btn btn-primary">Manage Faculties</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-book"></i>
+              <h5 class="card-title mt-3">Manage Programs</h5>
+              <p class="card-text">View and manage academic programs.</p>
+              <a [routerLink]="['/mprogram']"class="btn btn-primary">Manage Programs</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div id="quick-links" class="quick-links mt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="fas fa-graduation-cap"></i>
-                <h5 class="card-title mt-3">Admissions</h5>
-                <p class="card-text">Apply for admissions and learn about our admission requirements.</p>
-                <a href="#admissions" class="btn btn-primary">Learn More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="far fa-calendar-alt"></i>
-                <h5 class="card-title mt-3">Events</h5>
-                <p class="card-text">Discover upcoming events and activities at University.</p>
-                <a href="#events" class="btn btn-primary">View Events</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="fas fa-newspaper"></i>
-                <h5 class="card-title mt-3">News</h5>
-                <p class="card-text">Read the latest news and announcements from University.</p>
-                <a href="#news" class="btn btn-primary">Read News</a>
-              </div>
-            </div>
-          </div>
-        
+  </div>
+  
+  

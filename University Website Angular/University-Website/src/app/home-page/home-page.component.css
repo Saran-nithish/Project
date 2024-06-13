@@ -20,7 +20,7 @@ body {
   }
 
   .jumbotron {
-    background-color: #007bff;
+    background-color: #489fb0;
     color: #ffffff;
     padding: 3rem 2rem;
     border-radius: 0;
@@ -46,7 +46,7 @@ body {
 
   .feature-box i {
     font-size: 3rem;
-    color: #007bff;
+    color: #489fb0;
   }
 
   .feature-box h3 {
@@ -78,7 +78,7 @@ body {
 
   .quick-links .card i {
     font-size: 2rem;
-    color: #007bff;
+    color: #489fb0;
   }
 
   .quick-links .card-title {
@@ -107,7 +107,6 @@ body {
     margin: 0 10px;
   }
 
-  /* Responsive styles */
   @media (max-width: 768px) {
     .jumbotron h1 {
       font-size: 2.5rem;

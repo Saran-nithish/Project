@@ -1,1 +1,104 @@
-<p>events works!</p>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" [routerLink]="['/user']">University</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">About</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/faculties']">Faculty</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/events']">Events</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/news']">News</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/application']">Applications</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Upcoming Events</h2>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card event-card">
+          <img src="assets/images/volley.jpg" class="card-img-top" alt="Volleyball Tournament">
+          <div class="card-body">
+            <h5 class="card-title">Volleyball Tournament</h5>
+            <p class="card-text">Join us for a friendly volleyball tournament!</p>
+            <p class="card-text"><strong>Date:</strong> June 20, 2024</p>
+            <p class="card-text"><strong>Time:</strong> 10:00 AM</p>
+            <p class="card-text"><strong>Venue:</strong> Sports Complex, University</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card event-card">
+          <img src="assets/images/football.jpg" class="card-img-top" alt="Football Match">
+          <div class="card-body">
+            <h5 class="card-title">Football Match</h5>
+            <p class="card-text">Cheer for your favorite teams in a thrilling football match!</p>
+            <p class="card-text"><strong>Date:</strong> June 25, 2024</p>
+            <p class="card-text"><strong>Time:</strong> 3:00 PM</p>
+            <p class="card-text"><strong>Venue:</strong> Football Ground, University</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card event-card">
+          <img src="assets/images/hack.jpg" class="card-img-top" alt="Hackathon">
+          <div class="card-body">
+            <h5 class="card-title">Hackathon</h5>
+            <p class="card-text">Showcase your coding skills in our annual hackathon!</p>
+            <p class="card-text"><strong>Date:</strong> July 5, 2024</p>
+            <p class="card-text"><strong>Time:</strong> 9:00 AM</p>
+            <p class="card-text"><strong>Venue:</strong> Computer Lab, University</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card event-card">
+          <img src="assets/images/cul.jpg" class="card-img-top" alt="Cultural Fest">
+          <div class="card-body">
+            <h5 class="card-title">Cultural Fest</h5>
+            <p class="card-text">Experience a celebration of diversity through music, dance, and art!</p>
+            <p class="card-text"><strong>Date:</strong> August 10, 2024</p>
+            <p class="card-text"><strong>Time:</strong> 5:00 PM</p>
+            <p class="card-text"><strong>Venue:</strong> Auditorium, University</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card event-card">
+          <img src="assets/images/semi.jpg" class="card-img-top" alt="Seminar on AI">
+          <div class="card-body">
+            <h5 class="card-title">Seminar on AI</h5>
+            <p class="card-text">Learn about the latest advancements in Artificial Intelligence!</p>
+            <p class="card-text"><strong>Date:</strong> September 15, 2024</p>
+            <p class="card-text"><strong>Time:</strong> 11:00 AM</p>
+            <p class="card-text"><strong>Venue:</strong> Seminar Hall, University</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card event-card">
+          <img src="assets/images/music.jpg" class="card-img-top" alt="Music Concert">
+          <div class="card-body">
+            <h5 class="card-title">Music Concert</h5>
+            <p class="card-text">Enjoy a mesmerizing music concert by talented artists!</p>
+            <p class="card-text"><strong>Date:</strong> October 20, 2024</p>
+            <p class="card-text"><strong>Time:</strong> 7:00 PM</p>
+            <p class="card-text"><strong>Venue:</strong> Open Air Theatre, University</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -15,20 +15,20 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="#">University</a>
+      <a class="navbar-brand" [routerLink]="['/user']">University</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
               aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">About</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">About</a></li>
           <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
           <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#our-faculty">Faculty</a></li>
-          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#manage-applications">Applications</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/faculties']">Faculty</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/events']">Events</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/news']">News</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/application']">Applications</a></li>
           <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
           <li class="nav-item">
             <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
@@ -81,18 +81,17 @@
                 <i class="fas fa-graduation-cap"></i>
                 <h5 class="card-title mt-3">Admissions</h5>
                 <p class="card-text">Apply for admissions and learn about our admission requirements.</p>
-                <a [routerLink]="['/admission']" class="btn btn-primary">Learn More</a>
+                <a [routerLink]="['/admission']" class="btn btn-secondary">Learn More</a>
               </div>
             </div>
           </div>
-
           <div class="col-lg-4 mb-4">
             <div class="card text-center">
               <div class="card-body">
                 <i class="far fa-calendar-alt"></i>
                 <h5 class="card-title mt-3">Events</h5>
                 <p class="card-text">Discover upcoming events and activities at University.</p>
-                <a href="#events" class="btn btn-primary">View Events</a>
+                <a [routerLink]="['/events']" class="btn btn-secondary">View Events</a>
               </div>
             </div>
           </div>
@@ -103,8 +102,39 @@
                 <i class="fas fa-newspaper"></i>
                 <h5 class="card-title mt-3">News</h5>
                 <p class="card-text">Read the latest news and announcements from University.</p>
-                <a href="#news" class="btn btn-primary">Read News</a>
+                <a [routerLink]="['/news']"class="btn btn-secondary">Read News</a>
               </div>
             </div>
           </div>
         
+<br><br>
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+        <h5>University</h5>
+        <p>Empowering minds, changing lives.</p>
+        <p>&copy; 2024 University. All rights reserved.</p>
+      </div>
+      <div class="col-md-3 text-center mb-3 mb-md-0">
+        <h5>Location</h5>
+        <p>Chennai, India</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <h5>Connect With Us</h5>
+        <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.502712264231!2d80.23148261482165!3d13.067439016006668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266ff0ebd2cc7%3A0x227d1591c1d8df31!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1624290306961!5m2!1sen!2sus" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

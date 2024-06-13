@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" [routerLink]="['/user']">University</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">About</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/faculties']">Faculty</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/events']">Events</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/news']">News</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/application']">Applications</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">About University</h2>
+  
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card about-card left-card">
+          <img src="assets/images/vision.jpg" class="card-img-top" alt="Vision and Mission">
+          <div class="card-body">
+            <h2 class="card-title">Vision and Mission</h2>
+            <p class="card-text">Our vision is to be a leader in providing quality education. Our mission is to foster intellectual growth and prepare students for the future.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-6 mb-4 offset-lg-6">
+        <div class="card about-card right-card">
+          <img src="assets/images/history.jpg" class="card-img-top" alt="History">
+          <div class="card-body">
+            <h2 class="card-title">History</h2>
+            <p class="card-text">University was founded in 1960. Since then, we have grown to become one of the leading educational institutions in the country.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card about-card left-card">
+          <img src="assets/images/values.jpg" class="card-img-top" alt="Values">
+          <div class="card-body">
+            <h2 class="card-title">Values</h2>
+            <p class="card-text">Our values include excellence, diversity, innovation, and integrity. We are committed to upholding these values in everything we do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 mb-4 offset-lg-6">
+        <div class="card about-card right-card">
+          <img src="assets/images/campus.jpg" class="card-img-top" alt="Campus Life">
+          <div class="card-body">
+            <h2 class="card-title">Campus Life</h2>
+            <p class="card-text">Experience vibrant campus life with a wide range of clubs, activities, and events that foster personal growth and development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card about-card left-card">
+          <img src="assets/images/achieve.jpg" class="card-img-top" alt="Achievements">
+          <div class="card-body">
+            <h2 class="card-title">Achievements</h2>
+            <p class="card-text">University has been recognized for its academic excellence, research contributions, and community service initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-6 mb-4 offset-lg-6">
+        <div class="card about-card right-card">
+          <img src="assets/images/leader.jpg" class="card-img-top" alt="Leadership">
+          <div class="card-body">
+            <h2 class="card-title">Leadership</h2>
+            <p class="card-text">Meet our dedicated leadership team who are committed to guiding and supporting our students and faculty.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,52 @@
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+
+.about-card {
+    transition: transform 0.2s;
+  }
+  
+  .about-card.left-card {
+    float: left;
+  }
+  
+  .about-card.right-card {
+    float: right;
+  }
+  
+  .about-card img {
+    height: 300px;
+    object-fit: cover; 
+  }
+  
+  .about-card .card-body {
+    height: 160px; 
+    overflow: hidden; 
+  }
+  
+  .about-card:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 992px) {
+    .about-card {
+      width: 100%; 
+      float: none;
+      clear: both;
+      margin: 0;
+    }
+  }
+  

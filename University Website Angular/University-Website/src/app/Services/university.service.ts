@@ -26,8 +26,10 @@ export class UniversityService {
     return this.http.post<Admission>(`${this.apiUrl}/Admissions`, admission);
   }
 
-  updateAdmissionStatus(id: number, status: string): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/Admissions/${id}`, { status });
+  updateAdmissionStatus(id: number, status: string): Observable<Admission> {
+    return this.http.put<Admission>(`${this.apiUrl}/Admissions/${id}`, null, {
+      params: { status }
+    });
   }
 
   getFinancialAids(): Observable<FinancialAid[]> {
@@ -47,6 +49,10 @@ export class UniversityService {
   }
   deleteProgram(programId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/ProgramDeets/${programId}`);
+  }
+
+  deleteAdmission(admissionId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/Admissions/${admissionId}`)
   }
 
 }

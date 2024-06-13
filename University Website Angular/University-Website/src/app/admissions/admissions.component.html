@@ -1,72 +1,82 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="#">University</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">About</a></li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#our-faculty">Faculty</a></li>
-          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#manage-applications">Applications</a></li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
-          <li class="nav-item">
-            <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
-          </li>
-        </ul>
-      </div>
+  <div class="container px-4 px-lg-5">
+    <a class="navbar-brand" [routerLink]="['/user']">University</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">About</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/faculties']">Faculty</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/events']">Events</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/news']">News</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/application']">Applications</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
+        </li>
+      </ul>
     </div>
-  </nav>
-  <br><br>
-  <br><br>
+  </div>
+</nav>
+<br><br>
+<br><br>
 
 <div class="container">
-    <h2>Submit Application</h2>
-    <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="userId">User ID</label>
-        <input type="number" id="userId" formControlName="userId" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="programId">Program ID</label>
-        <input type="number" id="programId" formControlName="programId" class="form-control">
-      </div>
-  
-      <div formGroupName="user">
-        <h3>User Details</h3>
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" formControlName="username" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" formControlName="email" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="contactInformation">Contact Information</label>
-          <input type="text" id="contactInformation" formControlName="contactInformation" class="form-control">
-        </div>
-      </div>
-  
-      <div formGroupName="academicProgram">
-        <h3>Academic Program Details</h3>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" formControlName="name" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="type">Type</label>
-          <input type="text" id="type" formControlName="type" class="form-control">
-        </div>
-      </div>
-      <br><br>
-      <button type="submit" class="btn btn-primary" [disabled]="!applicationForm.valid">Submit</button>
-    </form>
+  <h2>Apply for a Program</h2>
+
+  <mat-form-field *ngIf="!selectedProgram">
+    <mat-label>Select Program</mat-label>
+    <mat-select (selectionChange)="selectProgram($event.value)">
+      <mat-option *ngFor="let program of programs" [value]="program.programId">
+        {{ program.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div *ngIf="selectedProgram">
+    <h3>{{ selectedProgram.name }}</h3>
+    <p><strong>Type:</strong> {{ selectedProgram.type }}</p>
+    <p><strong>Description:</strong> {{ selectedProgram.description }}</p>
+    <p><strong>Admission Requirements:</strong> {{ selectedProgram.admissionRequirements }}</p>
+    <p><strong>Curriculum Details:</strong> {{ selectedProgram.curriculumDetails }}</p>
   </div>
-  
-  
+
+  <form (ngSubmit)="submitApplication()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="application.studentName" name="studentName" required>
+    </mat-form-field>&nbsp;&nbsp;
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="application.email" name="email" type="email" required>
+    </mat-form-field>&nbsp;&nbsp;
+    <mat-form-field>
+      <mat-label>About Yourself</mat-label>
+      <textarea matInput [(ngModel)]="application.applicationFormData" name="applicationFormData" required></textarea>
+    </mat-form-field>&nbsp;&nbsp;
+    <button mat-button type="submit" color="primary">Submit</button>
+  </form>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" *ngIf="showSuccessDialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Application Submitted Successfully!</h5>&nbsp;&nbsp;
+        <button type="button" class="close" aria-label="Close" (click)="closeDialog()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Your application has been submitted successfully. We will review it and get back to you shortly.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="closeDialog()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

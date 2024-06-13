@@ -6,7 +6,8 @@ import { ProgramFormComponent } from '../dialog/program-form/program-form.compon
 import { MatToolbar} from '@angular/material/toolbar';
 import { MatCardActions, MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from '../Services/user.service';
 
 @Component({
   selector: 'app-manage-programs',
@@ -18,10 +19,15 @@ import { RouterLink } from '@angular/router';
 export class ManageProgramsComponent {
   programs: Program[] = [];
 
-  constructor(private programService: UniversityService, private dialog: MatDialog) {}
+  constructor(private programService: UniversityService, private dialog: MatDialog,private router: Router,  private userService: UserService) {}
 
   ngOnInit(): void {
     this.loadPrograms();
+  }
+
+  logout(): void {
+    this.userService.logout();
+    this.router.navigate(['/login']);
   }
 
 

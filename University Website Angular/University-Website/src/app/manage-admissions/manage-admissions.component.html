@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" [routerLink]="['/home']">University</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/mprogram']">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/managefaculties']">Faculties</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/manageadmissions']">Applications</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+  <br><br>
+
+<div class="container">
+    <h2>Manage Applications</h2>
+  
+    <div *ngIf="admissions.length === 0" class="alert alert-info">No admissions found.</div>
+  
+    <div *ngFor="let admission of admissions" class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ admission.studentName }}</h5>
+        <p class="card-text"><strong>Email:</strong> {{ admission.email }}</p>
+        <p class="card-text"><strong>Program:</strong> {{ admission.programId }}</p>
+        <p class="card-text"><strong>Status:</strong> {{ admission.status }}</p>
+        <p class="card-text"><strong>Submission Date:</strong> {{ admission.submissionDate | date }}</p>
+  
+        <button mat-button color="primary" *ngIf="admission.status !== 'Approved' && admission.status !== 'Rejected'" (click)="approveAdmission(admission)">Approve</button>
+        <button mat-button color="warn" *ngIf="admission.status !== 'Approved' && admission.status !== 'Rejected'" (click)="rejectAdmission(admission)">Reject</button>
+      </div>
+    </div>
+  </div>
+  

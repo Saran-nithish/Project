@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container px-4 px-lg-5">
-    <a class="navbar-brand" href="#">University</a>
+    <a class="navbar-brand" [routerLink]="['/user']">University</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">About</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">About</a></li>
         <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
         <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
-        <li class="nav-item"><a class="nav-link" href="#our-faculty">Faculty</a></li>
-        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-        <li class="nav-item"><a class="nav-link" href="#manage-applications">Applications</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/faculties']">Faculty</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/events']">Events</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/news']">News</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/application']">Applications</a></li>
         <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
         <li class="nav-item">
           <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
@@ -23,18 +23,21 @@
   </div>
 </nav>
 <br><br>
-
-<div class="programs-list">
-  <mat-card *ngFor="let program of programs" class="program-card">
-    <mat-card-header>
-      <mat-card-title>{{ program.name }}</mat-card-title>
-      <mat-card-subtitle>{{ program.type }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ program.description }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary" (click)="apply(program.programId)">Apply</button>
-    </mat-card-actions>
-  </mat-card>
+<div class="program-container">
+  <div class="programs-list">
+    <mat-card *ngFor="let program of programs" class="program-card">
+      <mat-card-header>
+        <mat-card-title>{{ program.name }}</mat-card-title>
+        <mat-card-subtitle>{{ program.type }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>Description:</strong> {{ program.description }}</p>
+        <p><strong>Admission Requirements:</strong> {{ program.admissionRequirements }}</p>
+        <p><strong>Curriculum Details:</strong> {{ program.curriculumDetails }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="apply(program.programId)">Apply</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

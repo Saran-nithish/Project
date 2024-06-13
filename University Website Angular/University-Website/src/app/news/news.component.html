@@ -1,1 +1,85 @@
-<p>news works!</p>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" [routerLink]="['/user']">University</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">About</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/programs']">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/admission']">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/faculties']">Faculty</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/events']">Events</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/news']">News</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/application']">Applications</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary nav-link" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+  <br><br>
+
+
+<div class="container">
+    <h2>News about the University</h2>
+  
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="assets/images/world.jpg" alt="University Ranks">
+          <div class="card-body">
+            <h3 class="card-title">University Ranks Among Top 10 in National Survey</h3>
+            <p class="card-text">
+              The University has been ranked among the top 10 universities in the
+              country, based on a comprehensive survey conducted by the National
+              University Ranking Authority.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Published on June 13, 2024</small>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="assets/images/research.jpg" alt="New Research Facility">
+          <div class="card-body">
+            <h3 class="card-title">New Research Facility Opens on Campus</h3>
+            <p class="card-text">
+              A state-of-the-art research facility has been inaugurated on campus,
+              equipped with advanced laboratories and resources to support
+              groundbreaking research across various disciplines.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Published on May 29, 2024</small>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="assets/images/Scholarship.jpg" alt="Scholarship Program">
+          <div class="card-body">
+            <h3 class="card-title">University Launches Scholarship Program for Underrepresented Students</h3>
+            <p class="card-text">
+              The university has introduced a new scholarship program aimed at
+              supporting underrepresented students. The program will provide
+              financial assistance and mentorship opportunities.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Published on April 15, 2024</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -23,4 +23,8 @@ export class UserService {
     localStorage.removeItem('currentUser');
   }
 
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.Url}/Users`);
+  }
+
 }
